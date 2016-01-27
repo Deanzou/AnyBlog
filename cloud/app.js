@@ -11,13 +11,13 @@ var adminController = require('cloud/controllers/admin.js');
 // Required for initializing Express app in Cloud Code.
 var app = express();
 
-// We will use HTTP basic auth to protect some routes (e.g. adding a new blog post)
-var basicAuth = express.basicAuth('YOUR_USERNAME','YOUR_PASSWORD');
-
 // The information showed about the poster
 var userEmail = 'YOUR_EMAIL';
 var userDisplayName = 'YOUR_DISPLAY_NAME';
 var userDescription = 'YOUR_DESCRIPTION';
+
+// We will use HTTP basic auth to protect some routes (e.g. adding a new blog post)
+var basicAuth = express.basicAuth('YOUR_USERNAME','YOUR_PASSWORD');
 
 // Instead of using basicAuth, you can also implement your own cookie-based
 // user session management using the express.cookieSession middleware
